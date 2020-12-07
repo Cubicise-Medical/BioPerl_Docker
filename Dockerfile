@@ -47,8 +47,9 @@ RUN apt-get update \
     && apt-mark manual $savedPackages \
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && rm -fr /var/cache/apt/* /var/lib/apt/lists/* \
-    && rm -fr ./cpanm /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7044* /tmp/*
+    && rm -fr ./cpanm /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7044* /tmp/* \
+    && mkdir /usr/src/workdir
 
-WORKDIR /
+WORKDIR /usr/src/workdir
 
-CMD ["perl5.32.0","-de0"]
+CMD ["perl","script.pl"]
