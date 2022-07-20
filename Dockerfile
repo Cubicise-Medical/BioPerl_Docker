@@ -52,4 +52,4 @@ RUN apt-get update \
 
 WORKDIR /usr/src/workdir
 
-CMD ["perl","script.pl"]
+CMD ["perl","script.pl","pp"]
