@@ -1,7 +1,7 @@
 FROM perl:5.26.1
 MAINTAINER NTLx <lx3325360@gmail.com>
 LABEL software="bioperl" \
-	base_image="perl:5.26" \
+	base_image="perl:5.26.1" \
 	container="bioperl" \
 	about.summary="Perl tools for computational molecular biology" \
 	about.home="https://www.cubicise.com"
